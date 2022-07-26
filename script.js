@@ -9,32 +9,26 @@ function hello() {
     console.log("Hello, World!");
 }
 
-function clickHandler(input) {
-    switch (input) {
-        case 1: 
-        case 2: 
-        case 3: 
-        case 4: 
-        case 5: 
-        case 6: 
-        case 7: 
-        case 8: 
-        case 9: {
-            if (operation === undefined) {
-                if (firstNumber === undefined) {
-                    firstNumber = String(input);
-                } else {
-                    firstNumber = String(firstNumber) + String(input);
-                }
-            } else {
-                if (secondNumber === undefined) {
-                    secondNumber = String(input);
-                } else {
-                    secondNumber = String(secondNumber) + String(input);
-                }
-            }
-            break;
+function clickNumber(input) {
+    if (operation === undefined) {
+        if (firstNumber === undefined) {
+            firstNumber = String(input);
+        } else {
+            firstNumber = String(firstNumber) + String(input);
         }
+    } else {
+        if (secondNumber === undefined) {
+            secondNumber = String(input);
+        } else {
+            secondNumber = String(secondNumber) + String(input);
+        }
+    }
+
+    console.log(firstNumber, operation, secondNumber);
+}
+
+function clickOperation(input) {
+    switch (input) {
         case '+': {
             operation = '+';
             break;
@@ -48,9 +42,9 @@ function clickHandler(input) {
             break;
         }
         default: {
-            console.log("Unknown input: " + input);
+            console.log("Unknown operation: " + input);
         }
     }
     
-    console.log(input, firstNumber, operation, secondNumber);
+    console.log(firstNumber, operation, secondNumber);
 }
