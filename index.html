@@ -14,35 +14,36 @@
             <div class="container">
                 <div class="row g-2">
                     <div class="col-12">
-                        <h1 class="fs-1 my-4 text-end text-white">
-                            0.7734
+                        <h1 id="display"
+                            class="fs-1 my-4 text-end text-white">
+                            0
                         </h1>
                     </div>
                     <div class="col-3">
                         <div class="button
                             fs-5 fw-bold text-bg-secondary text-center rounded-circle"
-                            onclick="hello()">
+                            id="clearMemoryButton">
                             C
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="button
                             fs-5 fw-bold text-bg-secondary text-center rounded-circle"
-                            onclick="hello()">
+                            onclick="switchSign()">
                             ±
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="button
                             fs-5 fw-bold text-bg-secondary text-center rounded-circle"
-                            onclick="hello()">
+                            onclick="switchToPercent()">
                             %
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="button
                             fs-5 fw-bold text-bg-warning text-center rounded-circle"
-                            onclick="hello()">
+                            onclick="clickOperation('/')">
                             ÷
                         </div>
                     </div>
@@ -71,7 +72,7 @@
                     <div class="col-3">
                         <div class="button
                             fs-5 fw-bold text-bg-warning text-center rounded-circle"
-                            onclick="hello()">
+                            onclick="clickOperation('x')">
                             x
                         </div>
                     </div>
@@ -100,7 +101,7 @@
                     <div class="col-3">
                         <div class="button
                             fs-5 fw-bold text-bg-warning text-center rounded-circle"
-                            onclick="hello()">
+                            onclick="clickOperation('-')">
                             -
                         </div>
                     </div>
@@ -137,21 +138,21 @@
                     <div class="col-6">
                         <div class="button
                             fs-5 fw-bold text-bg-dark text-center rounded-pill"
-                            onclick="hello()">
+                            onclick="clickNumber(0)">
                             0
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="button
                             fs-5 fw-bold text-bg-dark text-center rounded-circle"
-                            onclick="hello()">
+                            onclick="clickNumber('.')">
                             .
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="button
                             fs-5 fw-bold text-bg-warning text-center rounded-circle"
-                            onclick="clickOperation('=')">
+                            onclick="calculate()">
                             =
                         </div>
                     </div>
